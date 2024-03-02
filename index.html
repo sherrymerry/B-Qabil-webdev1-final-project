@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+       <link rel="stylesheet" href="foods.css">
+       <link rel="stylesheet" href="food1.css">
+       <link rel="shortcut icon" type="image" href="images\navbar.png">
+
+       <script src="https://cdn.tailwindcss.com"></script>
+       
+       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+       
+
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- nav bar start -->
+
+<header style="background-color: lightyellow; color:black;  font-family:Poppins;" class="text-gray-600 body-font">
+  <div class="container mx-auto flex flex-wrap p-1 flex-col md:flex-row items-center">
+    <a href="index.html" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+
+      <span style="color:brown; font-size: 30px; font-family:fantasy;" class="ml-3 text-xl"><img src="images\food.stoppp.svg" alt width="80px">Food.Stoppp</span>
+    </a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      <a href="aboutus.html" style="font-size:25px; font-family:fantasy; color:brown;"  class="mr-5 hover:text-gray-900">About Us</aboutus.php>
+      <a href="contactus.html" style="font-size:25px; font-family:fantasy; color:brown;"  class="mr-5 hover:text-gray-900">Contact Us</a>
+      <a href="gallery.html" style="font-size:25px; font-family:fantasy; color:brown;"  class="mr-5 hover:text-gray-900">Gallery</a>
+      
+    </nav>
+   
+  </div>
+</header>
+
+
+<div class="salebar">
+
+    <h1 class="bar wow animate__animated animate__flip" data-wow-duration="2s" data-wow-delay="0.5s">All the prices are exclusive of 13% Sales Tax</h1>
+</div>
+
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand w-40" href="#"><img src="images\navbar.png" width="70px"
+          height="70px" alt=""></a>
+
+          <a href="images\LAUNCHSOON.png"><button class="location container h-9 w-15 mt-2 wow animate__animated animate__flash" data-wow-duration="2s" data-wow-delay="0.5s" ><i class='bx bxs-map'></i>Home Delivery/Soon</a>
+
+    
+
+          <button class="phone container h-9 mt-2 wow animate__animated animate__flash" data-wow-duration="2s" data-wow-delay="0.5s"><i class='bx bxs-phone'></i><a href="tel:(021)30303012">(021)30303012</a></button>
+          </button>
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="aboutus.php">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="contactus.php">Contact Us</a>
+          </li> -->
+      </div>
+    </div>
+  </nav>
+  <!-- nav bar end  -->
+
+  <!-- carousel start  -->
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/banner.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/1.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/savour food.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/2.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
+  <!-- carousel end  -->
+
+
+ 
+<!-- search box starts -->
+
+  <div class="search mt-3">
+    <div class="container">
+
+      <input class="inputbox" type="text" id="searchInput" placeholder="Search For item by Title.." oninput="showSuggestions()">
+        <ul class="suggestions" id="suggestions"></ul>
+    </div>
+</div>
+
+
+   <!-- search box end  -->
+
+
+
+
+<div class="sticky-bar container-fluid w-100 mt-2 mb-8">
+    <div class="row">
+        <div class="sticky">
+
+        <div class="stickybar1 col-sm-1 offset-1 ">
+            <a href="#psldeal"><h1 class="PSL-DEALS"><img class="img" src="images\sticky psl.PNG" alt=""></h1></a>
+        </div>
+
+        <div class="stickybar2 col-sm-1  offset-1">
+            <a href="#deal" ><h1 class="DEALS"><img class="img" src="images\sticky deal.PNG" alt=""></h1></a>
+        </div>
+
+        <div class="stickybar3 col-sm-1 offset-1">
+            <a href="#starter"  ><h1 class="STARTER"><img class="img" src="images\sticky starter.PNG" alt=""></h1></a>
+        </div>
+
+        <div class="stickybar col-sm-1 offset-1">
+           <a href="#bbq" ><h1 class="BBQ"><img class="img" src="images\sticky bbq.PNG" alt=""></h1></a> 
+        </div>
+
+        <div class="stickybar5 col-sm-1 offset-1">
+            <a href="#karahi" ><h1 class="KARAHI"><img class="img" src="images\sticky karahi.PNG" alt=""></h1></a>
+        </div>
+
+        <div class="stickybar6 col-sm-1 offset-1">
+           <a href="#mocktails" > <h1 class="MOCKTAILS"><img class="img" src="images\sticky mocktails.PNG" alt=""></h1></a>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- add to cart starts -->
+
+
+
+
+<!-- add to cart ends -->
+
+<!-- card1 starts -->
+
+<img class="psldeal-image container mt-3 pb-3" src="images\psl deals.webp" alt="" id="psldeal">
+
+<div class="sections">
+
+<section class="card1 pb-2">
+<div class="container">
+    <div class="row">
+        
+        <div class="item1 col-md-2 mt-1 wow animate__animated animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s">
+
+        <strong class="off-sale">8% OFF</strong>
+
+    <img class="img" src="images\deal1.webp " alt ="">
+    <h1 class="deal1 wow animate__animated animate__headShake" data-wow-duration="2s" data-wow-delay="0.5s">PSL DEAL 01</h1>
+    <p class="deal-1 ">Serves 1 OR 2 --- CHICKEN CHATTNI ROLL <br> & CHICKEN MAYO GARLIC ROLL</p>
+    <h4 class="price1"><del>Rs. 610 </del>Rs. 560</h4>
+    <a href="billing.html"><button class="cart1"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+
+        <div class="item2 col-md-2 mt-1 offset-1   wow animate__animated animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s">
+
+        <strong class="off-sale">9% OFF</strong>
+
+    <img  class="img" src="images/deal2.webp "  alt ="">
+    <h1 class="deal2  wow animate__animated animate__shakeX" data-wow-duration="2s" data-wow-delay="0.5s">PSL DEAL 02</h1>
+    <p class="deal-2 ">Serves 1 OR 2 --- CHICKEN CHATTNI ROLL , CHICKEN TIKKA <br> (LEG) & PARATHA.</p>
+    <h4 class="price2"><del>Rs. 920 </del>Rs. 840</h4>
+    <a href="billing.html"><button class="cart2"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+        <div class="item3 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s">
+
+        <strong class="off-sale">8% OFF</strong>
+
+    <img  class="img" src="images\deal 3.webp"  alt ="">
+    <h1 class="deal3  wow animate__animated animate__headShake" data-wow-duration="2s" data-wow-delay="0.5s">PSL DEAL 03</h1>
+    <p class="deal-3 ">Serves 1 OR 2 --- ZINGER BURGER <br> , CRISPY ROLL & DRINK</p>
+    <h4 class="price3"><del>Rs. 1060</del> Rs. 970</h4>
+    <a href="billing.html"><button class="cart3"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+
+        <div class="item4 col-md-2 mt-1 offset-1  wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s">
+
+        <strong class="off-sale">14% OFF</strong>
+
+    <img  class="img" src="images\deal 4.webp "  alt ="">
+    <h1 class="deal4  wow animate__animated animate__shakeY" data-wow-duration="2s" data-wow-delay="0.5s">PSL DEAL 04</h1>
+    <p class="deal-4 ">Serves 2 OR 3 --- BBQ CHICKEN BURGER <br> & MALAI CLUB SANDWICH</p>
+    <h4 class="price4"><del>Rs. 1400 </del> Rs. 1210 </h4>
+    <a href="billing.html"><button class="cart4"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+
+
+    </div>
+</div>
+</section>
+
+<!-- card1 ends -->
+
+
+
+<!-- card2 starts -->
+
+
+<section class="card2">
+<div class="container">
+    <div class="row">
+        
+        <div class="item5 col-md-2 mt-1 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s" >
+
+        <strong class="off-sale">7% OFF</strong>
+
+    <img class="img" src="images\deal 5.webp" alt ="">
+    <h1 class="deal5 wow animate__animated animate__shakeY" data-wow-duration="2s" data-wow-delay="0.5s">PSL DEAL 05</h1>
+    <p class="deal-5">Serves 3 OR 4 --- CHICKEN HANDI , MALAI BOTI, <br> PARATHA, 3 x NAAN, 1.5 LTR DRINK</p>
+    <h4 class="price5"><del>Rs. 2905 </del>Rs. 2690 </h4>
+    <a href="billing.html"><button class="cart5"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+
+        <div class="item6 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s">
+
+        <strong class="off-sale">13% OFF</strong>
+
+    <img  class="img" src="images\deal 6.webp"  alt ="">
+    <h1 class="deal6 wow animate__animated animate__headShake" data-wow-duration="2s" data-wow-delay="0.5s">PSL DEAL 06</h1>
+    <p class="deal-6">Serves 2 OR 3 --- AMERICAN GRILLED <br> SANDWICH AND SINGAPOREAN RICE</p>
+    <h4 class="price6"><del>Rs. 1950 </del>Rs. 1700</h4>
+    <a href="billing.html"><button class="cart6"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+        <div class="item7 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s">
+
+        <strong class="off-sale">18% OFF</strong>
+
+    <img  class="img" src="images\deal 7.webp"  alt ="">
+    <h1 class="deal7 wow animate__animated animate__shakeX" data-wow-duration="2s" data-wow-delay="0.5s">PSL DEAL 07</h1>
+    <p class="deal-7">Serves 2 OR 3 --- SHAHI CHATAK BOTI, <br> WITH CREAMY KABAB ALONG WITH TWO PARATHAS</p>
+    <h4 class="price7"><del>Rs. 1060</del> Rs. 970</h4>
+    <a href="billing.html"><button class="cart7"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+
+        <div class="item8 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s">
+
+        <strong class="off-sale">13% OFF</strong>
+
+    <img  class="img" src="images\deal 8.webp"  alt ="">
+    <h1 class="deal8 wow animate__animated animate__shakeY" data-wow-duration="2s" data-wow-delay="0.5s">PSL DEAL 08</h1>
+    <p class="deal-8">Serves 2 OR 3 --- CHICKEN SCHEZWAN AND CHICKEN CHOWMEIN</p>
+    <h4 class="price8"><del>Rs. 2120 </del>Rs. 1740</h4>
+    <a href="billing.html"><button class="cart8"><i class='bx bx-plus'></i></button></a>
+        </div>
+
+
+
+    </div>
+</div>
+</section>
+
+
+<!-- card2 ends -->
+
+
+
+<!-- card3 starts -->
+
+    <img class="deal-image container mt-5" src="images\deals.webp" alt="" id="deal">
+
+
+    <section class="deal-card3 mt-3">
+<div class="container">
+    <div class="row">
+        
+        <div class="item9 col-md-2 mt-1  wow animate__animated animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s">
+
+        <strong class="off-sale">10% OFF</strong>
+
+    <img class="img" src="images\deal9.webp" alt ="">
+    <h1 class="deal9   wow animate__animated animate__headShake" data-wow-duration="2s" data-wow-delay="0.5s" >DEAL 01</h1>
+    <p class="deal-9">Serves 1 --- Zinger Burger <br>, Fries, Coleslaw & Drink</p>
+    <h4 class="price9"><del>Rs. 775 </del>Rs. 700</h4>
+    <a href="billing.html"><button class="cart9"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+
+        <div class="item10 col-md-2 mt-1 offset-1   wow animate__animated animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s" >
+
+        <strong class="off-sale">10% OFF</strong>
+
+    <img  class="img" src="images\deal10.webp"  alt ="">
+    <h1 class="deal10   wow animate__animated animate__shakeY" data-wow-duration="2s" data-wow-delay="0.5s" >DEAL 02</h1>
+    <p class="deal-10">Serves 1 --- Chicken Boti Roll, <br> Fried Chicken Pc, Dinner Roll, Raita, Soft Drink</p>
+    <h4 class="price10"><del>Rs. 865 </del>Rs. 780</h4>
+    <a href="billing.html"><button class="cart10"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+        <div class="item11 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s" >
+
+        <strong class="off-sale">8% OFF</strong>
+
+    <img  class="img" src="images\deal11.webp"  alt ="">
+    <h1 class="deal11  wow animate__animated animate__headShake" data-wow-duration="2s" data-wow-delay="0.5s" >DEAL 03</h1>
+    <p class="deal-11">Serves 1 --- Chicken Tikka (Leg),<br>Paratha & Soft Drink</p>
+    <h4 class="price11"><del>Rs. 780 </del> Rs. 720</h4>
+    <a href="billing.html"><button class="cart11"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+
+        <div class="item12 col-md-2 mt-1 offset-1   wow animate__animated animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s">
+
+        <strong class="off-sale">10% OFF</strong>
+
+    <img  class="img" src="images\deal12.webp"  alt ="">
+    <h1 class="deal12  wow animate__animated animate__shakeX" data-wow-duration="2s" data-wow-delay="0.5s" >DEAL 04</h1>
+    <p class="deal-12">Serves 1 OR 2 --- Zinger Burger, <br> Fried Drum Stick, Fries, Coleslaw, Soft Drink</p>
+    <h4 class="price12"><del>Rs. 1050 </del> Rs. 950</h4>
+    <a href="billing.html"><button class="cart12"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+
+
+    </div>
+</div>
+</section>
+
+
+<!-- card3 ends -->
+
+
+<!-- card4 starts -->
+
+
+
+<section class="deal-card4 mt-4">
+<div class="container">
+    <div class="row">
+        
+        <div class="item13 col-md-2 mt-1 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s" >
+
+        <strong class="off-sale">9% OFF</strong>
+
+    <img class="img" src="images\deal13.webp" alt ="">
+    <h1 class="deal13 wow animate__animated animate__headShake" data-wow-duration="2s" data-wow-delay="0.5s">DEAL 05</h1>
+    <p class="deal-13">Serves 2 OR 3 --- Chicken Chowmein, Club Sandwich, Fries & Coleslaw</p>
+    <h4 class="price13"><del>Rs. 1690</del> Rs. 1530</h4>
+    <a href="billing.html"><button class="cart13"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+
+        <div class="item14 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s" >
+
+        <strong class="off-sale">7% OFF</strong>
+
+    <img  class="img" src="images\deal14.webp"  alt ="">
+    <h1 class="deal14 wow animate__animated animate__headShake" data-wow-duration="2s" data-wow-delay="0.5s" >DEAL 06</h1>
+    <p class="deal-14">Serves 2 --- Chicken Burger/Beef Burger, Chicken Roll/Beef Roll, Fries, Coleslaw & Drink</p>
+    <h4 class="price14"><del>Rs. 1950 </del>Rs. 1700</h4>
+    <a href="billing.html"><button class="cart14"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+        <div class="item15 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s">
+
+        <strong class="off-sale">9% OFF</strong>
+
+    <img  class="img" src="images\deal15.webp"  alt ="">
+    <h1 class="deal15 wow animate__animated animate__shakeY" data-wow-duration="2s" data-wow-delay="0.5s">DEAL 07</h1>
+    <p class="deal-15">Serves 2 --- Zinger Burger, Chicken Tikka  (Leg), Paratha, Fries & Coleslaw</p>
+    <h4 class="price15"><del>Rs. 1015 </del> Rs. 940</h4>
+    <a href="billing.html"><button class="cart15"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+
+        <div class="item16 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s" >
+
+        <strong class="off-sale">8% OFF</strong>
+
+    <img  class="img" src="images\deal16.webp"  alt ="">
+    <h1 class="deal16 wow animate__animated animate__shakeX" data-wow-duration="2s" data-wow-delay="0.5s">DEAL 08</h1>
+    <p class="deal-16">Serves 2 --- SEEKH KABAB ,  CHICKEN TIKKA (LEG) , PARATHA</p>
+    <h4 class="price16"><del>Rs. 2120 </del>Rs. 1740</h4>
+    <a href="billing.html"><button class="cart16"><i class='bx bx-plus'></i></button></a>
+        </div>
+
+
+
+    </div>
+</div>
+</section>
+
+
+<!-- card4 ends -->
+
+
+
+<!-- card5 starts -->
+
+<img class="starter-image container mt-5" src="images\starters.webp" alt="" id="starter">
+
+
+<section class="starter-card5 mt-4">
+<div class="container">
+    <div class="row">
+        
+        <div class="item17 col-md-2 mt-1 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s">
+
+      
+
+        <strong class="popular"><i class='bx bxs-hot'></i>Popular</strong>
+    <img class="img" src="images\deal17.webp" alt ="">
+    <h1 class="deal17 wow animate__animated animate__headShake" data-wow-duration="2s" data-wow-delay="0.5s" >CHICKEN CORN SOUP (SINGLE)</h1>
+    <p class="deal-17">Serves 1 OR 2 --- Pure chicken stock  with chicken chunks and bits of corn.</p>
+    <h4 class="price17"><del>Rs. 1800</del> Rs. 1230</h4>
+    <a href="billing.html"><button class="cart17"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+
+        <div class="item18 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s" >
+
+       
+    <img  class="img" src="images\deal18.webp"  alt ="">
+    <h1 class="deal18 wow animate__animated animate__shakeX" data-wow-duration="2s" data-wow-delay="0.5s" >CHICKEN CORN SOUP (FAMILY)</h1>
+    <p class="deal-18">Serves 4 OR 5 --- Pure chicken stock with chicken chunks and bits of corn.</p>
+    <h4 class="price18"><del>Rs. 1980 </del>Rs. 1600</h4>
+    <a href="billing.html"><button class="cart18"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+        <div class="item19 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s" >
+
+        
+        <strong class="popular"><i class='bx bxs-hot'></i>Popular</strong>
+    <img  class="img" src="images\deal19.webp"  alt ="">
+    <h1 class="deal19 wow animate__animated animate__shakeY" data-wow-duration="2s" data-wow-delay="0.5s" >HOT & SOUR SOUP (SINGLE)</h1>
+    <p class="deal-19">Serves 1 OR 2 --- Made with chicken broth,chunk of chicken and variety vegetable along with tangy taste.</p>
+    <h4 class="price19"><del>Rs. 1010 </del> Rs. 840</h4>
+    <a href="billing.html"><button class="cart19"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+
+        <div class="item20 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s" >
+
+        
+       
+    <img  class="img" src="images\deal200.webp"  alt ="">
+    <h1 class="deal20 wow animate__animated animate__shakeX" data-wow-duration="2s" data-wow-delay="0.5s" >HOT & SOUR SOUP (FAMILY)</h1>
+    <p class="deal-20">Serves 1 OR 2 --- Made with chicken broth, chunk of chicken and variety vegetable along with tangy taste.</p>
+    <h4 class="price20"><del>Rs. 2220 </del>Rs. 1640</h4>
+    <a href="billing.html"><button class="cart20"><i class='bx bx-plus'></i></button></a>
+        </div>
+
+
+
+    </div>
+</div>
+</section>
+
+<!-- card5 ends -->
+
+
+
+<!-- card6 starts -->
+
+<img class="bbq-image container mt-5" src="images\bbq.webp" alt="" id="bbq">
+
+
+
+<section class="bbq-card6 mt-4">
+<div class="container">
+    <div class="row">
+        
+        <div class="item21 col-md-2 mt-1 wow animate__animated animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s" >
+
+      
+        <strong class="hot-item"><i class='bx bxs-hot'></i>Hot Item</strong>
+    <img class="img" src="images\deal21.webp" alt ="">
+    <h1 class="deal21 wow animate__animated animate__headShake" data-wow-duration="2s" data-wow-delay="0.5s" >CHICKEN TIKKA</h1>
+    <p class="deal-21">Serves 1 --- Barbecued Quarter chicken, marinated in ginger, garlic, red chilies and more, served  with our special BBQ sauce.</p>
+    <h4 class="price21"><del>Rs. 800</del> Rs. 630</h4>
+    <a href="billing.html"><button class="cart21"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+
+        <div class="item22 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s" >
+
+        <strong class="hot-item"><i class='bx bxs-hot'></i>Hot Item</strong>
+    <img  class="img" src="images\deal22.webp"  alt ="">
+    <h1 class="deal22 wow animate__animated animate__headShake" data-wow-duration="2s" data-wow-delay="0.5s">CHATKHARA TIKKA</h1>
+    <p class="deal-22">Serves 1 --- Barbecued Quarter chicken, marinated with in-house made BBQ sauces and spices,  served with our special BBQ sauce.</p>
+    <h4 class="price22"><del>Rs. 1780 </del>Rs. 1230</h4>
+    <a href="billing.html"><button class="cart22"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+        <div class="item23 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s">
+
+        
+        <strong class="hot-item"><i class='bx bxs-hot'></i>Hot Item</strong>
+    <img  class="img" src="images\deal23.webp"  alt ="">
+    <h1 class="deal23 wow animate__animated animate__shakeX" data-wow-duration="2s" data-wow-delay="0.5s" >MALAI TIKKA</h1>
+    <p class="deal-23">Serves 1 --- Barbecued Quarter chicken, marinated in a creamy based marination,  served with our special BBQ sauce.</p>
+    <h4 class="price23"><del>Rs. 1000 </del> Rs. 740</h4>
+    <a href="billing.html"><button class="cart23"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+
+        <div class="item24 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s" >
+
+        
+        <strong class="hot-item"><i class='bx bxs-hot'></i>Hot Item</strong>
+    <img  class="img" src="images\deal24.webp"  alt ="">
+    <h1 class="deal24 wow animate__animated animate__headShake" data-wow-duration="2s" data-wow-delay="0.5s" >MEXICAN CHICKEN</h1>
+    <p class="deal-24">Serves 1 OR 2 --- Boneless chicken fillet  stuffed with green chilies, onion  and coriander, grilled over live charcoals.</p>
+    <h4 class="price24"><del>Rs. 2220 </del>Rs. 1640</h4>
+    <a href="billing.html"><button class="cart24"><i class='bx bx-plus'></i></button></a>
+        </div>
+
+
+
+    </div>
+</div>
+</section>
+
+
+<!-- card6 ends -->
+
+
+<!-- card7 starts -->
+
+
+<img class="karahi-image container mt-5" src="images\chkarahi.webp" alt="" id="karahi">
+
+
+
+<section class="karahi-card7 mt-4">
+<div class="container">
+    <div class="row">
+        
+        <div class="item25 col-md-2 mt-1 wow animate__animated  animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s">
+
+        <strong class="featured"><i class='bx bxs-hot'></i>Featured</strong>
+    <img class="img" src="images\deal29.webp" alt ="">
+    <h1 class="deal25 wow animate__animated animate__headShake" data-wow-duration="2s" data-wow-delay="0.5s" >CHICKEN KARAHI</h1>
+    <p class="deal-25">Serves 2 OR 3 --- A gravy of delicious and spicy combination of tomatoes, green chilies, crush chilies and black pepper full of flavor meat</p>
+    <h4 class="price25"> Rs. 630</h4>
+    <a href="billing.html"><button class="cart25"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+
+        <div class="item26 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s" >
+
+        <strong class="featured"><i class='bx bxs-hot'></i>Featured</strong>
+    <img  class="img" src="images\deal30.webp"  alt ="">
+    <h1 class="deal26 wow animate__animated animate__shakeX" data-wow-duration="2s" data-wow-delay="0.5s" >CHICKEN BROWN KARAHI</h1>
+    <p class="deal-26">Serves 2 OR 3 --- Dry meat with flavors of chatpata masala, green chiliies, crush chiliies, black pepper, and lemon juice.</p>
+    <h4 class="price26">Rs. 1230</h4>
+    <a href="billing.html"><button class="cart26"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+        <div class="item27 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s" >
+
+
+    <img  class="img" src="images\deal27.webp"  alt ="">
+    <h1 class="deal27 wow animate__animated animate__shakeY" data-wow-duration="2s" data-wow-delay="0.5s" >CHICKEN PESHAWARI KARAHI</h1>
+    <p class="deal-27">Serves 2 OR 3 --- A gravy of delicious and spicy combination of tomatoes, green chiliies, crush chiliies and black pepper full of flavor meat</p>
+    <h4 class="price27">Rs. 740</h4>
+    <a href="billing.html"><button class="cart27"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+
+        <div class="item28 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s" >
+
+        
+
+    <img  class="img" src="images\deal28.webp"  alt ="">
+    <h1 class="deal28 wow animate__animated animate__shakeY" data-wow-duration="2s" data-wow-delay="0.5s" >CHICKEN BUTTER KARAHI</h1>
+    <p class="deal-28">Serves 2 OR 3 --- Meat cooked in butter along with tomatoes, green chilies, crush chilies and black pepper.</p>
+    <h4 class="price28">Rs. 1640</h4>
+    <a href="billing.html"><button class="cart28"><i class='bx bx-plus'></i></button></a>
+        </div>
+
+
+
+    </div>
+</div>
+</section>
+
+<!-- card7 ends -->
+
+
+
+<!-- card8 starts -->
+
+
+<img class="mocktails-image container mt-5" src="images\mocktails.webp" alt="" id="mocktails">
+
+
+
+<section class="mocktails-card8 mt-4">
+<div class="container">
+    <div class="row">
+        
+        <div class="item31 col-md-2 mt-1 wow animate__animated animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s">
+
+        <strong class="featured"><i class='bx bxs-hot'></i>Ice-Cold Specials</strong>
+    <img class="img" src="images\deal31.webp" alt ="">
+    <h1 class="deal31 wow animate__animated animate__shakeY" data-wow-duration="2s" data-wow-delay="0.5s">FRESH LIME</h1>
+    <p class="deal-31">A perfect blend of lemon juice and soda together, refreshing with a lemony punch.</p>
+    <h4 class="price31"> Rs. 430</h4>
+    <a href="billing.html"><button class="cart31"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+
+        <div class="item32 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s" >
+
+        <strong class="featured"><i class='bx bxs-hot'></i>Ice-Cold Specials</strong>
+    <img  class="img" src="images\deal32.webp"  alt ="">
+    <h1 class="deal32 wow animate__animated animate__headShake" data-wow-duration="2s" data-wow-delay="0.5s" >FRESH LIME (DIET)</h1>
+    <p class="deal-32">A perfect blend of lemon juice and soda together, refreshing with a lemony punch.</p>
+    <h4 class="price32">Rs. 1230</h4>
+    <a href="billing.html"><button class="cart32"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+        <div class="item33 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s" >
+
+        <strong class="featured"><i class='bx bxs-hot'></i>Ice-Cold Specials</strong>
+    <img  class="img" src="images\deal33.webp"  alt ="">
+    <h1 class="deal33 wow animate__animated animate__headShake" data-wow-duration="2s" data-wow-delay="0.5s" >MINT LEMONADE</h1>
+    <p class="deal-33">A perfect delight of refreshing mint leaves and lemon.</p>
+    <h4 class="price33">Rs. 540</h4>
+    <a href="billing.html"><button class="cart33"><i class='bx bx-plus' ></i></button></a>
+        </div>
+
+
+        <div class="item34 col-md-2 mt-1 offset-1 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s" >
+
+        
+        <strong class="featured"><i class='bx bxs-hot'></i>Ice-Cold Specials</strong>
+    <img  class="img" src="images\deal34.webp"  alt ="">
+    <h1 class="deal34 wow animate__animated animate__shakeX" data-wow-duration="2s" data-wow-delay="0.5s" >MINT LEMONADE (DIET)</h1>
+    <p class="deal-34">A perfect delight of refreshing mint leaves and lemon.</p>
+    <h4 class="price34">Rs. 340</h4>
+    <a href="billing.html"><button class="cart34"><i class='bx bx-plus'></i></button></a>
+        </div>
+
+
+
+    </div>
+</div>
+</section>
+
+</div>
+
+<!-- card8 ends -->
+
+
+
+  <!-- footer start  -->
+  <footer>
+    <p class="foot">Copy Rights Reserved. All Rights Received. <br>Designed By Sharib, Shahryar And Huzaifa.</p>
+  </footer>
+  <!-- footer end  -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/0.1.6/wow.min.js"></script>
+
+
+  
+<script src="script.js"></script>
+
+<script src="wow.min.js"></script>
+
+<script>
+  new WOW().init();
+</script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

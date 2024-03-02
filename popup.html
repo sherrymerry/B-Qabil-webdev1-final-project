@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+       <link rel="stylesheet" href="foods.css">
+       <link rel="stylesheet" href="food1.css">
+       <link rel="shortcut icon" type="image" href="images\navbar.png">
+
+       <script src="https://cdn.tailwindcss.com"></script>
+       
+       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+       
+
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .contanier {
+        width: 100%;
+        height: 100vh;
+        background-color: #3c5077;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn {
+        padding: 10px 60px;
+        background: #fff;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        font-size: 22px;
+        font-weight: 500;
+        border-radius: 30px;
+    }
+
+    .popup {
+        width: 400px;
+        background: #fff;
+        border-radius: 6px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.1);
+        text-align: center;
+        padding: 0 30px 30px;
+        color: #333;
+        visibility: hidden;
+        transition: transfrom 0.4s, top 0.4s;
+    }
+
+    .open-popup {
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .popup img {
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+        border-radius: 50%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .popup h2 {
+        font-size: 38px;
+        font-weight: 500;
+        margin: 30px 0 10px;
+    }
+
+    .popup button {
+        width: 100%;
+        margin-top: 50px;
+        padding: 10px 0;
+        background: #6fd649;
+        color: #fff;
+        border: 0;
+        outline: none;
+        font-size: 18px;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+
+    }
+</style>
+
+<body>
+
+    <header style="background-color: lightyellow; color:black;  font-family:Poppins;" class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-1 flex-col md:flex-row items-center">
+          <a href="index.html" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      
+            <span style="color:brown; font-size: 30px; font-family:fantasy;" class="ml-3 text-xl"><img src="images\food.stoppp.svg" alt width="80px">Food.Stoppp</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a href="aboutus.html" style="font-size:25px; font-family:fantasy; color:brown;"  class="mr-5 hover:text-gray-900">About Us</aboutus.php>
+            <a href="contactus.html" style="font-size:25px; font-family:fantasy; color:brown;"  class="mr-5 hover:text-gray-900">Contact Us</a>
+            <a href="gallery.html" style="font-size:25px; font-family:fantasy; color:brown;"  class="mr-5 hover:text-gray-900">Gallery</a>
+            
+          </nav>
+         
+        </div>
+      </header>
+
+    <div class="contanier">
+        <button type="sumbit" class="btn" onclick="openPopup()">Confirm</button>
+        <div class="popup" id="popup">
+            <img src="images/klipartz.com.png">
+            <h2>Thank You</h2>
+            <p>Your Order Has Been Successfully Sumbited.</p>
+            <button type="button" onclick="closePopup()">Ok</button>
+        </div>
+    </div>
+
+  
+
+
+  <!-- footer start  -->
+  <footer>
+    <p class="foot">Copy Rights Reserved. All Rights Received. <br>Designed By Sharib, Shahryar And Huzaifa.</p>
+  </footer>
+  <!-- footer end  -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/0.1.6/wow.min.js"></script>
+
+
+  
+<script src="script.js"></script>
+
+<script src="wow.min.js"></script>
+
+<script>
+    let popup = document.getElementById("popup");
+    function openPopup() {
+        popup.classList.add("open-popup")
+    }
+    function closePopup() {
+        popup.classList.remove("open-popup")
+    }
+
+</script>
+
+<script>
+  new WOW().init();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+crossorigin="anonymous"></script>
+</body>
+
+
+</html>
