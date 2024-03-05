@@ -48,11 +48,11 @@
       <!-- <a class="navbar-brand w-40" href="#"><img src="" width="70px"
           height="70px" alt=""></a> -->
 
-          <a href="images\LAUNCHSOON.png"><button class="location container h-9 w-15 mt-2 wow animate__animated animate__flash" data-wow-duration="2s" data-wow-delay="0.5s" ><i class='bx bxs-map'></i>Home Delivery/Soon</a>
+          <a href="images\LAUNCHSOON.png"><button class="location container h-9 w-15 mt-1 wow animate__animated animate__flash" data-wow-duration="2s" data-wow-delay="0.5s" ><i class='bx bxs-map'></i>Home Delivery/Soon</a>
 
     
 
-          <button class="phone container h-9 mt-2 wow animate__animated animate__flash" data-wow-duration="2s" data-wow-delay="0.5s"><i class='bx bxs-phone'></i><a href="tel:(021)30303012">(021)30303012</a></button>
+          <button class="phone container h-9 mt-1 wow animate__animated animate__flash" data-wow-duration="2s" data-wow-delay="0.5s"><i class='bx bxs-phone'></i><a href="tel:(021)30303012">(021)30303012</a></button>
           </button>
 
 
@@ -72,31 +72,30 @@
       <div class="flex flex-wrap -m-2">
         <div class="p-2 w-1/2">
           <div class="relative">
-            <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+            <label for="name" class="leading-7 text-sm text-gray-600">Name</label required >
             <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <div id="nameError" class="error-message"></div>
           </div>
         </div>
         <div class="p-2 w-1/2">
           <div class="relative">
-            <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+            <label for="email" class="leading-7 text-sm text-gray-600">Email</label required>
             <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <div id="emailError" class="error-message"></div>
           </div>
         </div>
         <div class="p-2 w-full">
           <div class="relative">
-            <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+            <label for="message" class="leading-7 text-sm text-gray-600">Message</label required>
             <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+            <div id="addressError" class="error-message"></div>
           </div>
         </div>
         <div class="p-2 w-full">
-        <form style="font-size:25px; color:brown;" id="contactform" action="https://formsubmit.io/send/sherrymerry20@gmail.com" method="POST">
-    <input name="name" type="text" id="name">
-    <input name="email" type="email" id="email">
-    <textarea name="comment" id="comment" rows="3"></textarea>
+        <form style="font-size:25px; color:black; background-color:  #9f6d46; font-family: Poppins; text-align: center; width: 110px; border-radius: 25px 25px;" id="contactform" action="https://formsubmit.io/send/sherrymerry20@gmail.com" method="POST">
+  
 
-    <input name="_formsubmit_id" type="text" style="display:none">
-
-    <input value="Submit" type="submit">
+          <button type="submit" onclick="return fillForm()">Submit</button>
    </form>
         </div>
         <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
@@ -136,7 +135,7 @@
     <!-- footer start  -->
 
     <footer>
-        <p>Copy Rights Reserved. All Rights Received. <br>Designed By Sharib, Shahryar And Huzaifa.</p>
+      <p class="foot mt-10 ">Copy Rights Reserved. All Rights Received. <br>Designed By Sharib, Shahryar And Huzaifa.</p>
     </footer>
 
     <!-- footer end  -->
@@ -152,7 +151,49 @@
 
 <script src="wow.min.js"></script>
 
+<!-- // contact us submit message starts -->
+
+
 <script>
+  function fillForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    // Check for empty fields
+    if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+      document.getElementById("nameError").innerHTML = "Please fill out all required fields.";
+      return false;
+    }
+
+    // Check email format
+    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+      document.getElementById("emailError").innerHTML = "Please enter a valid email address.";
+      return false;
+    }
+
+    // Check message length
+    var words = message.split(/\s+/).length;
+    if (words < 5) {
+      document.getElementById("addressError").innerHTML = "Please enter a message with at least 5 words.";
+      return false;
+    }
+
+    // Clear any existing error messages
+    document.getElementById("nameError").innerHTML = "";
+    document.getElementById("emailError").innerHTML = "";
+    document.getElementById("addressError").innerHTML = "";
+
+    // Form is valid, allow submission
+    return true;
+  }
+
+</script>
+
+
+
+
+  
 new WOW().init();
 </script>
 

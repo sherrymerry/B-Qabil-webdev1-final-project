@@ -16,12 +16,12 @@ body{
 
 /* navbar starts */
 
-.salebar{
+/* .salebar{
     height: 50px;
     width: 100%;
     background: transparent;
     text-align: center;
-    position: fixed;
+    position: sticky;
     overflow: hidden;
 }
 
@@ -31,10 +31,11 @@ body{
     font-weight: 300;
     color: brown;
     padding: 2px;
+    position: relative;
     margin-top: 10px;
     overflow: hidden;
 }
-
+ */
 
 .nav-item {
     font-size: 20px;
@@ -113,17 +114,19 @@ body{
 .search .container .inputbox {
     width: 1800px;
     height: 45px;
-    background-color: #f0f0f0;
+    background-color: #9f6d46;
     border: 2px #858686;
     font-size: 21px;
-    color: gold;
+    color: #ffffff;
     padding: 22px;
     padding-top: 15px;
     padding-bottom: 15px;
     border-radius: 13px 13px;
 }
+
+
 #suggestions :hover{
-    color: gold;
+    color: #ffffff;
     height: 30px;
     width: 100%;
     border-radius: 7px;
@@ -167,181 +170,6 @@ body{
     padding: 50px;
     font-size: 30px;
 }
-
-
-
-
-
-
-
-/* stickybar starts */
-
-.sticky-bar{
-    
-    background-color: #000000;
-    border: 2px solid #b59a4a;
-    display: flex;
-    
-
-}
-
-
-
-.sticky{
-
-    display: flex;
-    background-color: #000000;
-    padding: 20px;    
-
-}
-
-
-
-.stickybar1{
-    margin-left: 15px;
-    
-
-}
-
-.stickybar1:hover{
-    background-color: #c29a6c;
-}
-
-
-
-.PSL-DEALS{
-    color: #b59a4a;
-    font-size: 80px;
-    
-}
-
-.PSL-DEALS .img{
-    width: 300px;
-}
-
-
-
-.stickybar2{
-    margin-left: 25px;
-    
-
-}
-
-.stickybar2:hover{
-    background-color: #c29a6c;
-}
-
-
-
-.DEALS{
-    color: #b59a4a;
-    font-size: 40px;
-    
-    
-}
-.DEALS .img{
-    width: 300px;
-}
-
-
-
-.stickybar3{
-    margin-left: 15px;
-    
-
-}
-
-.stickybar3:hover{
-    background-color: #c29a6c;
-}
-
-
-
-.STARTER{
-    color: #b59a4a;
-    font-size: 20px;
-    
-    
-}
-
-.STARTER.img{
-    width: 300px;
-}
-
-
-.stickybar4{
-    margin-left: 15px;
-    
-
-}
-
-.stickybar4:hover{
-    background-color: #c29a6c;
-}
-
-
-
-.BBQ{
-    color: #b59a4a;
-    font-size: 20px;
-    
-    
-}
-.BBQ .img{
-    width: 300px;
-}
-
-
-
-.stickybar5{
-    margin-left: 15px;
-    
-
-}
-
-.stickybar5:hover{
-    background-color: #c29a6c;
-}
-
-
-
-.KARAHI{
-    color: #b59a4a;
-    font-size: 20px;
-    
-    
-}
-.KARAHI .img{
-    width: 300px;
-}
-
-
-
-.stickybar6{
-    margin-left: 15px;
-    
-
-}
-
-.stickybar6:hover{
-    background-color: #c29a6c;
-}
-
-
-
-.MOCKTAILS{
-    color: #b59a4a;
-    font-size: 20px;
-    
-    
-}
-
-.MOCKTAILS .img{
-    width: 300px;
-}
-
-
-/* stickybar ends */
 
 
 
@@ -2912,9 +2740,9 @@ body{
     font-weight: bold;
     background-color: #212529;
     background-color: #c4996c;
-    margin-top: 2px;
+    margin-top: -10px;
     margin-left: 100px;
-    margin-bottom: 5px;
+    margin-bottom: -10px;
     border-radius: 5px 5px;
 }
 .cart26 .bx-plus{
@@ -3538,6 +3366,8 @@ body{
 }
 
 
+
+
 /* card8 ends */
 
 
@@ -3576,3 +3406,8 @@ footer p {
     font-family: Kanit;
 
 }
+
+
+
+
+
