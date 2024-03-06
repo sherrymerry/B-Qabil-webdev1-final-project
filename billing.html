@@ -1,13 +1,27 @@
 <!DOCTYPE html>
-<html  lang="en">
-
+<html lang="en">
 <head>
-  <title>Food.Stopp–Savor the Flavor</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="foods.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food.Stopp–Savor the Flavor</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 
+       <link rel="shortcut icon" type="image" href="images\navbar.png">
+
+       
+       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+       
+
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+      <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+</head>
+
+<style>
 
     body {
       font-family: Arial;
@@ -97,8 +111,8 @@
       background-color: grey;
     }
 
-    .btncancel {
-      background-color: grey;
+    #btncancel {
+      background-color: goldenrod;
       color: white;
       padding: 12px;
       margin: 10px 0;
@@ -111,7 +125,7 @@
       font-size: 17px;
     }
 
-    .btncancel:hover {
+    #btncancel:hover {
       background-color: #2196F3;
     }
 
@@ -145,7 +159,7 @@
       }
     }
   </style>
-</head>
+
 <body>
 
   
@@ -153,7 +167,7 @@
   <div class="row">
     <div class="col-75">
       <div class="container">
-        <form action="/popup.html" method="post">
+        <form action="popup.html" method="post">
 
           <div class="row">
             <div class="col-50">
@@ -189,10 +203,10 @@
               <h3>Payment</h3>
               <label for="fname">Accepted Cards</label>
               <div class="icon-container">
-                <i class="fa fa-cc-visa" style="color:navy;"></i>
-                <i class="fa fa-cc-amex" style="color:blue;"></i>
-                <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                <i class="fa fa-cc-discover" style="color:orange;"></i>
+                <i class="fa-brands fa-cc-visa" style="color:navy;"></i>
+                <i class="fa-brands fa-cc-amex" style="color:blue;"></i>
+                <i class="fa-brands fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa-brands fa-cc-discover" style="color:orange;"></i>
               </div>
               <label for="cname">Name on Card</label>
               <input type="text" id="cname" name="cardname" placeholder="John More Doe"  required>
@@ -225,7 +239,7 @@
          
           
          <button type="submit" id="btnbill"  onclick="return validateForm()">Place order</button>
-          <a href="index.html"><button type="button" class="btncancel">Cancel</button></a>
+          <a href="index.html"><button type="button" id="btncancel">Cancel</button></a>
         </form>
         
       </div>
