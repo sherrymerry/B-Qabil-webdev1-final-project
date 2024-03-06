@@ -208,9 +208,10 @@
 
 
     // Check message length
-   
-    if ( message.trim() === "") {
+    var words = message.split(/\s+/).length;
+    if ( message.trim() === "" || words < 2) {
       document.getElementById("messageError").innerHTML = "Please fill out all required fields.";
+      document.getElementById("messageError").innerHTML = "Please enter a message with at least 5 words.";
       document.getElementById("messageError").style.color = "red";
       return false;
     }
