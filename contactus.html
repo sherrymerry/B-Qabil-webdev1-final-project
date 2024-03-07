@@ -56,7 +56,7 @@
 
 <!-- <div class="salebar">
 
-    <h1 class="bar wow animate__animated animate__flip" data-wow-duration="2s" data-wow-delay="0.5s">All the prices are exclusive of 13% Sales Tax</h1>
+    <h1 class="bar wow animate_animated animate_flip" data-wow-duration="2s" data-wow-delay="0.5s">All the prices are exclusive of 13% Sales Tax</h1>
 </div> -->
 
 
@@ -65,11 +65,11 @@
       <!-- <a class="navbar-brand w-40" href="#"><img src="" width="70px"
           height="70px" alt=""></a> -->
 
-          <a href="images\LAUNCHSOON.png"><button class="location container h-9 w-15 mt-1 wow animate__animated animate__flash" data-wow-duration="2s" data-wow-delay="0.5s" ><i class='bx bxs-map'></i>Home Delivery/Soon</a>
+          <a href="images\LAUNCHSOON.png"><button class="location container h-9 w-15 mt-1 wow animate_animated animate_flash" data-wow-duration="2s" data-wow-delay="0.5s" ><i class='bx bxs-map'></i>Home Delivery/Soon</a>
 
     
 
-          <button class="phone container h-9 mt-1 wow animate__animated animate__flash" data-wow-duration="2s" data-wow-delay="0.5s"><i class='bx bxs-phone'></i><a href="tel:(021)30303012">(021)30303012</a></button>
+          <button class="phone container h-9 mt-1 wow animate_animated animate_flash" data-wow-duration="2s" data-wow-delay="0.5s"><i class='bx bxs-phone'></i><a href="tel:(021)30303012">(021)30303012</a></button>
           </button>
 
 
@@ -92,7 +92,7 @@
         <div class="p-2 w-1/2">
           <div class="relative">
             
-            <input type="hidden" name="access_key" value="01edf7b9-2a54-4df0-a500-0bb999fe84fe">
+            <input type="hidden" name="access_key" value="b30638aa-a29d-4242-a8ad-89d0cd6a091b">
             <label for="name" class="leading-7 text-sm text-gray-600">Name</label >
             <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
             <div id="nameError" class="error-message"></div>
@@ -208,10 +208,9 @@
 
 
     // Check message length
-    var words = message.split(/\s+/).length;
-    if ( message.trim() === "" || words < 2) {
+    
+    if ( message.trim() === "") {
       document.getElementById("messageError").innerHTML = "Please fill out all required fields.";
-      document.getElementById("messageError").innerHTML = "Please enter a message with at least 5 words.";
       document.getElementById("messageError").style.color = "red";
       return false;
     }
